@@ -69,7 +69,8 @@ public class JFramePrincipal extends JFrame {
 		this.tablaPersonajes.setFillsViewportHeight(true);
 				
 		this.txtFiltro = new JTextField(20);
-		//Se añade un listener para detectar cambios en el campo de texto
+		
+		//Se define un listener para detectar cambios en txtFiltro
 		this.txtFiltro.getDocument().addDocumentListener(new DocumentListener() {
 			@Override
 			public void insertUpdate(DocumentEvent e) {
@@ -178,6 +179,7 @@ public class JFramePrincipal extends JFrame {
 					
 					//Se borra el filtro
 					txtFiltro.setText("");
+					
 					//Se cargan de nuevo los comics para actualizar el número de personajes
 					loadComics();
 										
